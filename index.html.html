@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mindset Reset for Weight Loss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            /* Color Palette */
+            --deep-forest-green: #0B1F1A;
+            --deep-forest-green-dark: #050d0a;
+            --terracotta: #FF6A00;
+            --terracotta-hover: #e65c00;
+            --terracotta-pale: #0B1F1A;
+            --warm-cream: #FFFFFF;
+            --amber-gold: #D4AF37;
+            --text-dark: #111111;
+            --text-muted: #555555;
+            --white: #FFFFFF;
+
+            /* Typography */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'DM Sans', sans-serif;
+
+            /* Layout */
+            --max-width: 1200px;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--warm-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-heading);
+            color: var(--deep-forest-green);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .muted {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--terracotta);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0px 4px 15px rgba(255, 106, 0, 0.4);
+        }
+
+        .btn:hover {
+            background-color: var(--terracotta-hover);
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0px 6px 20px rgba(255, 106, 0, 0.6);
+        }
+
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--terracotta);
+            border: 2px solid var(--terracotta);
+            box-shadow: none;
+        }
+
+        .btn-ghost:hover {
+            background-color: var(--terracotta);
+            color: var(--white);
+            box-shadow: 0 4px 6px rgba(196, 98, 58, 0.2);
+        }
+
+        .btn-full {
+            width: 100%;
+            max-width: 420px;
+        }
+
+        .tag {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: var(--terracotta);
+            margin-bottom: 1rem;
+        }
+
+        .placeholder-img {
+            background-color: #E2DDD5;
+            border: 2px dashed #B8B0A3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-family: var(--font-body);
+            text-align: center;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .real-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 1. TOP BAR */
+        .top-bar {
+            background-color: var(--deep-forest-green);
+            color: var(--warm-cream);
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* 2. HERO SECTION */
+        .hero {
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .hero p.subhead {
+            font-size: clamp(1.125rem, 2vw, 1.35rem);
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .proof-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .hero-img-container {
+            margin-top: var(--spacing-lg);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            aspect-ratio: 16/9;
+        }
+
+        /* 3. FREE VALUE SECTION */
+        .free-tips {
+            padding: var(--spacing-lg) 0;
+            background-color: var(--deep-forest-green);
+            color: var(--white);
+        }
+
+        .free-tips h2,
+        .free-tips p {
+            color: var(--white);
+        }
+
+        .tips-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: var(--spacing-lg);
+        }
+
+        .tip-card {
+            background: var(--white);
+            color: var(--text-dark);
+            padding: 2rem;
+            border: 1px solid #E5E5E5;
+            border-left: 4px solid var(--terracotta);
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .tip-card h3 {
+            color: var(--deep-forest-green);
+        }
+
+        .tip-card p {
+            color: var(--text-muted);
+        }
+
+        .tip-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .tip-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 4. PROBLEM SECTION */
+        .problem-section {
+            background-color: var(--white);
+            color: var(--text-dark);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+
+        .problem-section h2 {
+            color: var(--deep-forest-green);
+        }
+
+        .problem-section .tag {
+            color: var(--terracotta);
+        }
+
+        .problem-section p {
+            color: var(--text-muted) !important;
+        }
+
+        .cycle-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: var(--spacing-lg) 0;
+        }
+
+        .cycle-step {
+            background: var(--white);
+            border: 1px solid #E5E5E5;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            width: calc(20% - 1.5rem);
+            min-width: 150px;
+            flex-grow: 1;
+        }
+
+        .cycle-step .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cycle-step strong {
+            color: var(--deep-forest-green);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+        }
+
+        .cycle-step p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        .highlight-box {
+            background-color: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--amber-gold);
+            padding: 1.5rem;
+            border-radius: 8px;
+            color: var(--amber-gold);
+            font-weight: 500;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 5. TRANSITION SECTION */
+        .transition-section {
+            background-color: var(--terracotta-pale);
+            color: var(--white);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+
+        .transition-section h2,
+        .transition-section p {
+            color: var(--white);
+        }
+
+        .transition-img-container {
+            margin-top: var(--spacing-lg);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            aspect-ratio: 2/1;
+        }
+
+        /* 6. PRODUCT INTRODUCTION */
+        .product-intro {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .book-cover-styled {
+            background: linear-gradient(135deg, #1e362d 0%, var(--deep-forest-green) 100%);
+            border-radius: 4px 12px 12px 4px;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2), inset 4px 0 10px rgba(255, 255, 255, 0.1);
+            position: relative;
+            transform: perspective(1000px) rotateY(-5deg);
+            aspect-ratio: 2/3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-left: 6px solid #14221c;
+        }
+
+        .book-cover-styled::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 12px;
+            background: linear-gradient(90deg, #D4AF37, #F3E5AB, #D4AF37);
+            border-radius: 4px 12px 0 0;
+        }
+
+        .book-cover-styled .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .book-cover-styled h3 {
+            color: white;
+            font-size: 2.2rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .book-cover-styled p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .pill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .pill {
+            background-color: var(--white);
+            color: var(--deep-forest-green);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(44, 74, 62, 0.2);
+        }
+
+        /* 7. BENEFITS */
+        .benefits {
+            padding: var(--spacing-lg) 0 var(--spacing-xl);
+            background-color: var(--deep-forest-green);
+            color: var(--white);
+        }
+
+        .benefits h2,
+        .benefits p {
+            color: var(--white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            padding: 2rem;
+            background: var(--white);
+            color: var(--text-dark);
+            border-radius: 8px;
+            border: 1px solid #E5E5E5;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-card h3 {
+            color: var(--deep-forest-green);
+        }
+
+        .benefit-card p {
+            color: var(--text-muted);
+        }
+
+        .benefit-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* 8. OFFER SECTION */
+        .offer-section {
+            background-color: var(--white);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .offer-card {
+            background: var(--white);
+            border: 1px solid #E5E5E5;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .offer-card .tag {
+            margin-bottom: 1rem;
+        }
+
+        .offer-card h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .micro-commitments {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .micro-commitments p {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .micro-commitments p::before {
+            content: "✓";
+            color: var(--terracotta);
+            font-weight: bold;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+
+        .decision-line {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: var(--deep-forest-green);
+        }
+
+        .ebook-cover-small {
+            width: 200px;
+            margin: 0 auto 2rem;
+            aspect-ratio: 2/3;
+        }
+
+        .price-display {
+            margin-bottom: 2rem;
+        }
+
+        .price-strike {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+
+        .price-main {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--deep-forest-green);
+            line-height: 1;
+        }
+
+        .price-note {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        .reassurance-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* 9. GUARANTEE SECTION */
+        .guarantee-section {
+            background-color: var(--deep-forest-green);
+            color: var(--white);
+            padding: var(--spacing-lg) 0;
+        }
+
+        .guarantee-section h2,
+        .guarantee-section p {
+            color: var(--white);
+        }
+
+        .guarantee-card {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: var(--white);
+            color: var(--text-dark);
+            border: 1px solid #E5E5E5;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guarantee-card h2 {
+            color: var(--deep-forest-green);
+        }
+
+        .guarantee-badge {
+            flex-shrink: 0;
+            width: 120px;
+            height: 120px;
+            background: var(--deep-forest-green);
+            color: var(--amber-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            padding: 1rem;
+            border: 4px solid var(--warm-cream);
+            box-shadow: 0 0 0 2px var(--deep-forest-green);
+        }
+
+        /* 10. FAQ SECTION */
+        .faq-section {
+            padding: var(--spacing-lg) 0 var(--spacing-xl);
+            background: var(--white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 1.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--deep-forest-green);
+            font-family: var(--font-body);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-muted);
+        }
+
+        .faq-answer-inner {
+            padding-bottom: 1.5rem;
+        }
+
+        /* 11. FINAL CTA SECTION */
+        .final-cta {
+            background-color: var(--terracotta-pale);
+            color: var(--white);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+
+        .final-cta h2,
+        .final-cta p {
+            color: var(--white);
+        }
+
+        .final-cta h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .final-img-container {
+            margin-top: var(--spacing-lg);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            aspect-ratio: 8/3;
+        }
+
+        /* 12. FOOTER */
+        .footer {
+            background-color: var(--deep-forest-green-dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .disclaimer {
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        /* STICKY BOTTOM BAR */
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--deep-forest-green);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .sticky-bar.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-bar h4 {
+            margin: 0;
+            color: white;
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+        }
+
+        .sticky-bar .price {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--amber-gold);
+        }
+
+        .sticky-bar .btn {
+            padding: 0.6rem 1.5rem;
+            font-size: 1rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+
+            .product-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cycle-step {
+                width: calc(50% - 1.5rem);
+            }
+
+            .guarantee-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .sticky-bar {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .sticky-bar .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cycle-step {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. TOP BAR -->
+    <div class="top-bar">
+        Free mindset tips inside — No email required
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero fade-up">
+        <div class="container">
+            <h1>You Haven't Failed the Diet.<br>The Diet Failed You.</h1>
+            <p class="subhead">Weight loss doesn't start with cutting calories. It starts with reprogramming the mindset
+                that keeps you trapped in the cycle.</p>
+
+            <a href="#free-tips" class="btn">Get Instant Access ↓</a>
+            <p class="muted" style="margin-top: 0.5rem;">No email. No credit card.</p>
+
+            <div class="proof-bar">
+                <span>✓ 12,000+ readers</span>
+                <span>✓ $9 full access</span>
+                <span>✓ 60-day guarantee</span>
+            </div>
+
+            <div class="hero-img-container" id="hero-image-container">
+                <img src="assets/hero-image.png" alt="Calm woman enjoying a healthy morning routine" class="real-image"
+                    width="1200" height="600" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FREE VALUE SECTION -->
+    <section id="free-tips" class="free-tips">
+        <div class="container fade-up">
+            <span class="tag">Free tips — no strings attached</span>
+            <h2>5 Mindset Shifts That Actually Work</h2>
+
+            <div class="tips-grid">
+                <div class="tip-card fade-up">
+                    <h3>Tip 01 — Name the Emotion Behind the Craving</h3>
+                    <p>Before you eat something you weren't planning on, pause. Ask yourself: "What am I actually hungry
+                        for?" Most of the time, it's not food. It's stress relief, comfort, or a break from your
+                        thoughts. Naming the feeling takes away its power.</p>
+                </div>
+                <div class="tip-card fade-up">
+                    <h3>Tip 02 — Replace "I Failed" With "I'm Learning"</h3>
+                    <p>One off-plan meal isn't a failure—it's data. Instead of beating yourself up and giving up for the
+                        rest of the day, look at what triggered it. Shift from a mindset of punishment to a mindset of
+                        curiosity. You're building a new system, not taking a pass/fail test.</p>
+                </div>
+                <div class="tip-card fade-up">
+                    <h3>Tip 03 — Start With the Smallest Possible Habit</h3>
+                    <p>Motivation gets you started, but microscopic habits keep you going. Instead of committing to
+                        10,000 steps a day, commit to a 5-minute walk. Make the habit so small you can't say no to it,
+                        even on your worst days.</p>
+                </div>
+                <div class="tip-card fade-up">
+                    <h3>Tip 04 — Stop Waiting to Feel "Ready"</h3>
+                    <p>Action creates momentum, not the other way around. If you wait until you feel fully motivated to
+                        change your habits, you'll be waiting forever. Commit to doing the right thing for just two
+                        minutes, and watch how often that carries you forward.</p>
+                </div>
+                <div class="tip-card fade-up">
+                    <h3>Tip 05 — Reframe Your Relationship With Food</h3>
+                    <p>Stop labeling food as "good" or "bad". When you moralize your meals, you attach your self-worth
+                        to what you eat. Food is fuel, energy, and sometimes just pleasure. Removing the guilt is the
+                        first step to stopping the binge-restrict cycle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PROBLEM SECTION -->
+    <section class="problem-section">
+        <div class="container fade-up">
+            <span class="tag">The real problem</span>
+            <h2>Why Every Diet Eventually Fails You</h2>
+            <p style="max-width: 700px; margin: 0 auto; color: rgba(255,255,255,0.9);">You know what to eat. You know
+                how to portion. The issue isn't caloric—it's mental. Without fixing the underlying behavioral loops,
+                you're just renting temporary results.</p>
+
+            <div class="cycle-box">
+                <div class="cycle-step fade-up">
+                    <div class="icon">🚀</div>
+                    <strong>Get Motivated</strong>
+                    <p>New Monday, new plan. You're 100% committed.</p>
+                </div>
+                <div class="cycle-step fade-up" style="transition-delay: 0.1s;">
+                    <div class="icon">🚫</div>
+                    <strong>Restrict</strong>
+                    <p>You cut out foods you love, relying purely on willpower.</p>
+                </div>
+                <div class="cycle-step fade-up" style="transition-delay: 0.2s;">
+                    <div class="icon">🍩</div>
+                    <strong>Slip Up</strong>
+                    <p>Stress hits, or social events happen. Willpower fades.</p>
+                </div>
+                <div class="cycle-step fade-up" style="transition-delay: 0.3s;">
+                    <div class="icon">😔</div>
+                    <strong>Guilt</strong>
+                    <p>"I ruined it. What's the point?" The spiral begins.</p>
+                </div>
+                <div class="cycle-step fade-up" style="transition-delay: 0.4s;">
+                    <div class="icon">🔄</div>
+                    <strong>Repeat</strong>
+                    <p>Wait for the next burst of motivation. Start over.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box fade-up">
+                The missing piece is a different mindset — not a better meal plan.
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TRANSITION SECTION -->
+    <section class="transition-section">
+        <div class="container fade-up">
+            <h2>Those 5 Tips Are Just the Beginning</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem;">If changing how you think about just one craving helps,
+                imagine what happens when you rewire your entire relationship with food, stress, and your body. The
+                deeper method is inside.</p>
+
+            <a href="#offer" class="btn btn-ghost">Unlock Full Access Now ↓</a>
+
+            <div class="transition-img-container" id="transition-image-container">
+                <img src="assets/nova-imagem.jpg" alt="Mulher em várias atividades saudáveis" class="real-image"
+                    width="800" height="400" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PRODUCT INTRODUCTION -->
+    <section class="product-intro">
+        <div class="container product-grid">
+            <div class="book-cover-wrapper fade-up">
+                <img src="assets/ebook-cover.png" alt="The Mindset Reset Ebook Cover"
+                    style="max-width: 100%; width: 400px; margin: 0 auto; display: block; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2)); mix-blend-mode: darken;">
+            </div>
+
+            <div class="product-info fade-up">
+                <span class="tag">The method</span>
+                <h2>A Practical System for Lasting Change</h2>
+                <p>This is not a diet book. You won't find meal plans or calorie-counting formulas here. This was
+                    written for real people who have tried everything, lost the same 10 pounds repeatedly, and are tired
+                    of feeling like they lack discipline.</p>
+                <p>We focus on the mental frameworks that bridge the gap between knowing what to do and actually doing
+                    it, consistently, on a Tuesday night when you're exhausted.</p>
+
+                <div class="pill-tags">
+                    <span class="pill">Mental reprogramming</span>
+                    <span class="pill">Habit science</span>
+                    <span class="pill">Food relationship reset</span>
+                    <span class="pill">Practical exercises</span>
+                    <span class="pill">Self-talk strategies</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. BENEFITS -->
+    <section class="benefits">
+        <div class="container fade-up">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="icon">💔</div>
+                    <h3>Break Emotional Eating Patterns</h3>
+                    <p>Discover how to separate your emotions from your food choices. Learn to self-soothe without
+                        reaching for the pantry.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">🛡️</div>
+                    <h3>Build a Resilient Mindset</h3>
+                    <p>Develop the mental armor to bounce back instantly after a slip-up, turning "failures" into minor
+                        speed bumps.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">🧱</div>
+                    <h3>Create Habits That Stick</h3>
+                    <p>Implement the science of micro-habits to build a genuinely healthy lifestyle that runs on
+                        autopilot, requiring zero willpower.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon">🤝</div>
+                    <h3>Change Your Relationship With Food</h3>
+                    <p>End the war with food. Stop seeing meals as "good" or "sinful" and learn how to enjoy eating
+                        without the crushing guilt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. OFFER SECTION -->
+    <section id="offer" class="offer-section">
+        <div class="container">
+            <div class="offer-card fade-up">
+                <span class="tag">Ready to go deeper?</span>
+                <h2>You've Seen What's Possible. Now Get the Full Method.</h2>
+
+                <div class="micro-commitments">
+                    <p>Yes, I'm ready to stop repeating the same diet cycle.</p>
+                    <p>Yes, I want to take real control of my mindset and habits.</p>
+                    <p>Yes, I want access to the full method.</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <p class="decision-line">👉 Yes, I accept to pay only $9 for full access to The Mindset Reset for Weight
+                    Loss.</p>
+
+                <div class="ebook-cover-small" id="ebook-image-container" style="padding: 1rem;">
+                    <img src="assets/ebook-cover.png" alt="The Mindset Reset Ebook Cover"
+                        style="max-width: 100%; border-radius: 8px; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15)); mix-blend-mode: darken;"
+                        loading="lazy">
+                </div>
+
+                <div class="price-display">
+                    <span class="price-strike">$27</span>
+                    <span class="price-main">$9</span>
+                    <span class="price-note">One-time payment — yours forever</span>
+                </div>
+
+                <a href="#" class="btn btn-full">Start Now for Only $9 →</a>
+
+                <div class="reassurance-row">
+                    <span>✓ One-time payment</span>
+                    <span>✓ Instant download</span>
+                    <span>✓ No subscription</span>
+                    <span>✓ 60-day guarantee</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. GUARANTEE SECTION -->
+    <section class="guarantee-section">
+        <div class="container fade-up">
+            <div class="guarantee-card">
+                <div class="guarantee-badge">
+                    60 Day<br>Guarantee
+                </div>
+                <div>
+                    <h2>Zero Risk. Completely Yours.</h2>
+                    <p>We are so confident that rewiring your mindset will change your approach to weight loss that we
+                        offer a full 60-day money-back guarantee. Read it, apply the techniques, and if you don't feel a
+                        profound shift in how you handle your habits, simply email us for a full refund. No questions
+                        asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ SECTION -->
+    <section class="faq-section">
+        <div class="container fade-up">
+            <h2 class="text-center" style="margin-bottom: 3rem;">Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">Is this another diet program?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">No. This ebook contains zero meal plans, calorie counting guides,
+                            or banned food lists. It is entirely focused on the psychological and behavioral aspects of
+                            lasting weight loss—the foundation that makes any nutritional approach actually work.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Do I need to exercise or follow a specific diet?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">You can pair these mental frameworks with whatever physical or
+                            nutritional routine you prefer. The principles taught here apply universally, whether you
+                            walk 10 minutes a day or train like an athlete. It’s about building the consistency to stick
+                            to what you choose.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">I've tried a lot of things. Why would this be different?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Because previous attempts likely focused on the symptom (what you
+                            were eating) rather than the root cause (why you were eating it, and how you mentally
+                            approached the process). By fixing the mental foundation, the physical actions become
+                            dramatically easier to sustain.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Is it beginner friendly?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Absolutely. The language is simple, relatable, and deeply
+                            empathetic. The exercises are practical steps you can start implementing in just two minutes
+                            a day, regardless of your past experience.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How do I access the ebook after purchasing?</button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Since it's a digital product, you'll receive immediate access. You
+                            can download the PDF straight to your phone, tablet, or computer and begin reading
+                            instantly.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FINAL CTA SECTION -->
+    <section class="final-cta">
+        <div class="container fade-up">
+            <h2>The Cycle Ends When You Decide It Does</h2>
+            <p style="max-width: 600px; margin: 0 auto;">You've spent enough time beating yourself up for not having
+                "enough willpower". It's time to build a system that doesn't rely on being perfect.</p>
+            <p style="max-width: 600px; margin: 0 auto 2rem;">Take the first step toward a peaceful relationship with
+                food and your body today.</p>
+
+            <a href="#offer" class="btn">Start Now for Only $9 →</a>
+            <p class="muted" style="margin-top: 1rem;">60-day money-back guarantee · Instant download · One-time payment
+            </p>
+
+            <div class="final-img-container" id="final-image-container">
+                <img src="assets/final-image.png" alt="Confident woman outdoors smiling" class="real-image" width="800"
+                    height="300" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 The Mindset Reset. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Support</a>
+            </div>
+            <p class="disclaimer">Results vary. The experiences shared are personal and not a guarantee of specific
+                outcomes. This ebook provides educational content on habit formation and mindset and is not a substitute
+                for professional medical or psychological advice.</p>
+        </div>
+    </footer>
+
+    <!-- STICKY BOTTOM BAR -->
+    <div class="sticky-bar" id="sticky-bar">
+        <div>
+            <h4>The Mindset Reset <span class="price">$9</span></h4>
+        </div>
+        <a href="#offer" class="btn">Unlock Full Access Now</a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Intersection Observer for Fade-Up Animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Optional: animate only once
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up').forEach(element => {
+                observer.observe(element);
+            });
+
+            // 2. FAQ Accordion Logic
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                    });
+
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                });
+            });
+
+            // 3. Sticky Bottom Bar Logic
+            const stickyBar = document.getElementById('sticky-bar');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 600) {
+                    stickyBar.classList.add('visible');
+                } else {
+                    stickyBar.classList.remove('visible');
+                }
+            });
+
+            // 4. Smooth scroll offset for fixed header/bar if needed
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href !== "#") {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>
